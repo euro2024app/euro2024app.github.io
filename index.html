@@ -1,13 +1,46 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieFlix</title>
+  <link rel="icon" href="https://play-lh.googleusercontent.com/V9twROXZca21hHQdeYvGNts5V3r4lH5JeP-1aoWmR8XQQZ7jj-EiTFwCTrkuybaK9A8y=w240-h480-rw" type="image/x-icon">
+  <!-- Choose a different theme from the Pace.js themes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000222; /* Change the background color */
+      color: #ffdd00; /* Change the text color */
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Site</h1>
-    <p>This is the main page.</p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+  <script>
+    Pace.on('hide', function () {
+      // Redirect to your site after the progress bar is complete
+      window.location.href = 'https://sites.google.com/view/euro2024livetv';
+    });
+
+    Pace.options = {
+      ajax: {
+        trackMethods: ['GET', 'POST']
+      },
+      restartOnRequestAfter: false,
+      restartOnPushState: false,
+      restartOnBack: false,
+      startOnPageLoad: false,
+      elements: false,
+      eventLag: false,
+      minTime: 0,
+      color: '#ffdd00', // Change the loading bar color
+    };
+  </script>
 </body>
 </html>
